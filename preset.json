@@ -1,0 +1,27 @@
+{
+    "useConfigFiles": true,
+    "plugins": {
+        "@vue/cli-plugin-babel": {},
+        "@vue/cli-plugin-eslint": {
+            "config": "standard",
+            "lintOn": [
+                "save"
+            ]
+        }
+    },
+    "configs": {
+        "postcss": {
+            "plugins": {
+                "postcss-pxtorem": {
+                    "rootValue": 37.5,
+                    "propList": ["*"],
+                    "selectorBlackList": []
+                }
+            }
+        }
+    },
+    "router": true,
+    "routerHistoryMode": false,
+    "vuex": true,
+    "cssPreprocessor": "node-sass"
+}
