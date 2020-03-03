@@ -10,7 +10,6 @@ module.exports = (api, options) => {
       axios: '^0.19.0',
       moment: '^2.24.0',
       'normalize.css': '^8.0.1',
-      'js-cookie': '^2.2.1',
       'amfe-flexible': '^2.2.1',
       'postcss-pxtorem': '^4.0.1'
     },

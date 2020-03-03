@@ -1,7 +1,7 @@
 function renderFiles(api) {
   api.render({
     './src/store/index.js': '../template/src/store/index.js',
-    './src/store/getter.js': '../template/src/store/getter.js',
+    './src/store/getters.js': '../template/src/store/getters.js',
     './src/store/modules/base.js': '../template/src/store/modules/base.js'
   })
 }
