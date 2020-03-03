@@ -24,7 +24,7 @@ export default function paramEndorse (param) {
   let sign = ''
   param = sortASCII(param)
   for (const key in param) {
-    if (param.hasOwnProperty(key)) {
+    if (Object.prototype.hasOwnProperty.call(param, key)) {
       const element = param[key]
       const paramStr = key + '=' + element
       stringAarr.push(paramStr)
