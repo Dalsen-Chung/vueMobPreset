@@ -14,6 +14,9 @@ const myAxios = axios.create({
 // 添加请求拦截器
 myAxios.interceptors.request.use(function (config) {
   // 在发送请求之前做些什么
+  config.headers = {
+    'Content-Type': 'application/json'
+  }
   return config
 }, function (error) {
   // 对请求错误做些什么
@@ -70,9 +73,19 @@ myAxios.interceptors.response.use(function (response) {
   return Promise.reject(error.message)
 })
 
-export function post (url, param) {
+export function post({ url, param }) {
   return new Promise((resolve, reject) => {
     myAxios.post(url, param).then(res => {
+      resolve(res.data)
+    }).catch(error => {
+      reject(error)
+    })
+  })
+}
+
+export function get({ url, param }) {
+  return new Promise((resolve, reject) => {
+    myAxios.get(url, { params: param }).then(res => {
       resolve(res.data)
     }).catch(error => {
       reject(error)
