@@ -27,6 +27,10 @@ module.exports = (api, options) => {
   main.renderFiles(api)
   utils.renderFiles(api)
   env.renderFiles(api)
+  //  渲染vue.config.js
+  api.render({
+    './vue.config.js': './template/vue.config.js'
+  })
 
   // 安装 vuex
   if (options.vuex) {
